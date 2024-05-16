@@ -1,40 +1,29 @@
+import java.util.Set;
 import java.util.HashSet;
 
 public class Main {
+
     public static void main(String[] args) {
-        HashSet<String> aHashSet = createHashset();
 
-        String toBeRemoved = "elemento3";
+        Set<Integer> hashSet2 = HashSetRiempito();
+        hashSet2.add(6);
 
-        for (String element : aHashSet) {
-            if (element.equals(toBeRemoved)) {
-                aHashSet.remove(element);
-                break;
+        for(Integer pippo : hashSet2){
+            if(alfredons.equals(6)){
+                hashSet2.remove(pippo);
             }
         }
+        System.out.println(hashSet2);
+        hashSet2.clear();
+        System.out.println(hashSet2);
+    }
+    public static Set<Integer> HashSetRiempito(){
+        Set<Integer> setInteger = new HashSet<Integer>();
+        setInteger.add(1);
+        setInteger.add(5);
+        setInteger.add(3);
 
-        if (aHashSet.isEmpty()) {
-            System.out.println("HashSet is empty");
-        } else {
-            System.out.println("HashSet contains stuff");
-        }
-
-        aHashSet.clear();
-
-        if (aHashSet.isEmpty()) {
-            System.out.println("HashSet is empty");
-        } else {
-            System.out.println("HashSet contains stuff");
-        }
+        return setInteger;
     }
 
-    public static HashSet<String> createHashset() {
-        HashSet<String> set = new HashSet<>();
-        set.add("elemento1");
-        set.add("elemento2");
-        set.add("elemento3");
-        set.add("elemento4");
-        set.add("elemento5");
-        return set;
-    }
 }
